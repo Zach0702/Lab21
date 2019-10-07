@@ -1,0 +1,14 @@
+﻿.editor label {
+    float: left;
+    width: 30px;
+    text-align: right;
+}
+
+.editor input[type=text]{
+    width: 80px;
+    margin: 0 0 0 10px;
+}
+
+body{
+    background-color:blue;
+}

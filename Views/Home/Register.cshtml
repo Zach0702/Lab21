@@ -1,0 +1,94 @@
+﻿@model Register
+@using System.ComponentModel.DataAnnotations;
+@using System.ComponentModel;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" type="text/css" />
+    
+</head>
+
+
+
+<body>
+    <h1>Please fill out the form to register!</h1>
+    <div>
+        <form asp-controller="Home" asp-action="AddUser" method="post">
+
+            <div class="editor">
+                <label>First Name: </label>
+                <input asp-for="FirstName" /><br />
+            </div>
+            <div class="editor">
+                <label>Last Name: </label>
+                <input asp-for="LastName" /><br />
+            </div>
+            <div class="editor">
+                <label>Email:</label>
+                <input asp-for="EMail" /><br />
+            </div>
+            <div class="editor">
+                <label>Phone Number: </label>
+                <input asp-for="PhoneNumber" /><br />
+            </div>
+            <div class="editor">
+                <label>Password:</label>
+                <input id="OnlinePassword"
+                       name="OnlinePassword"
+                       type="password"
+                       asp-for="OnlinePassword" /><br />
+            </div>
+            <button>Register</button>
+        </form>
+    </div>
+</body>
+</html>
+
+@*@using (Html.BeginForm("AddUser", "Home", FormMethod.Post,null))
+    {
+        <fieldset>
+            <legend>Registration Form</legend>
+            <ol>
+                <li>
+                    <div class="editor">
+                        @Html.LabelFor(m => m.FirstName)
+                        @Html.TextBoxFor(m => m.FirstName)
+                        @Html.ValidationMessageFor(m => m.FirstName)
+                    </div>
+                </li>
+                <li>
+                    <div class="editor">
+                        @Html.LabelFor(m => m.LastName)
+                        @Html.TextBoxFor(m => m.LastName)
+                        @Html.ValidationMessageFor(m => m.LastName)
+                    </div>
+                </li>
+                <li>
+                    <div class="editor">
+                        @Html.LabelFor(m => m.EMail)
+                        @Html.TextBoxFor(m => m.EMail)
+                        @Html.ValidationMessageFor(m => m.EMail)
+                    </div>
+                </li>
+                <li>
+                    <div class="editor">
+                        @Html.LabelFor(m => m.PhoneNumber)
+                        @Html.TextBoxFor(m => m.PhoneNumber)
+                        @Html.ValidationMessageFor(m => m.PhoneNumber)
+                    </div>
+                </li>
+                <li>
+                    <div class="editor">
+                        @Html.LabelFor(m => m.OnlinePassword)
+                        @Html.TextBoxFor(m => m.OnlinePassword)
+                        @Html.ValidationMessageFor(m => m.OnlinePassword)
+                    </div>
+                </li>
+            </ol>
+            <input type="submit" value="Register" />
+        </fieldset>
+
+    }*@
+
+
